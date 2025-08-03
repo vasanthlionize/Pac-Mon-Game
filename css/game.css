@@ -1,0 +1,117 @@
+/* Game Screen Styles */
+#game-screen {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.score-container, .lives-container, .level-container {
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+#score, #lives, #level {
+    color: var(--primary-color);
+    margin-left: 5px;
+}
+
+#game-canvas {
+    flex-grow: 1;
+    background-color: var(--bg-color);
+    display: block;
+}
+
+#pause-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    color: var(--text-color);
+    font-size: 12px;
+    padding: 5px;
+    z-index: 10;
+}
+
+/* Game Over Screen */
+#game-over-screen h2 {
+    color: var(--accent-color);
+    font-size: 32px;
+    margin-bottom: 30px;
+    animation: pulse 2s infinite;
+}
+
+.final-score, .high-score {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+#final-score, #high-score {
+    color: var(--primary-color);
+    margin-left: 10px;
+}
+
+/* Pause Screen */
+#pause-screen h2 {
+    color: var(--secondary-color);
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+/* Game Elements */
+.pacmon {
+    border-radius: 50%;
+    background-color: var(--player-color);
+}
+
+.enemy {
+    border-radius: 50%;
+}
+
+.enemy.red {
+    background-color: var(--enemy-red);
+}
+
+.enemy.blue {
+    background-color: var(--enemy-blue);
+}
+
+.enemy.purple {
+    background-color: var(--enemy-purple);
+}
+
+.enemy.green {
+    background-color: var(--enemy-green);
+}
+
+.enemy.vulnerable {
+    background-color: var(--vulnerable-enemy);
+}
+
+.dot {
+    background-color: var(--dot-color);
+    border-radius: 50%;
+}
+
+.power-pellet {
+    background-color: var(--power-up-color);
+    border-radius: 50%;
+    animation: pulse 1s infinite;
+}
+
+.fruit {
+    background-color: var(--accent-color);
+}
+
+.wall {
+    background-color: var(--wall-color);
+}

@@ -1,0 +1,127 @@
+/* Main Styles */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+    /* Classic Theme (Default) */
+    --bg-color: #000;
+    --text-color: #fff;
+    --primary-color: #ffcc00;
+    --secondary-color: #00ffff;
+    --accent-color: #ff0000;
+    --wall-color: #0000aa;
+    --dot-color: #ffcc00;
+    --player-color: #ffcc00;
+    --enemy-red: #ff0000;
+    --enemy-blue: #00ffff;
+    --enemy-purple: #ff00ff;
+    --enemy-green: #00ff00;
+    --vulnerable-enemy: #0000ff;
+    --power-up-color: #ffffff;
+}
+
+/* Neon Theme */
+body.neon-theme {
+    --bg-color: #0a0a0a;
+    --text-color: #fff;
+    --primary-color: #ff00ff;
+    --secondary-color: #00ffff;
+    --accent-color: #ff00ff;
+    --wall-color: #00ffff;
+    --dot-color: #ff00ff;
+    --player-color: #ffff00;
+    --enemy-red: #ff0066;
+    --enemy-blue: #00ffff;
+    --enemy-purple: #cc00ff;
+    --enemy-green: #00ff66;
+    --vulnerable-enemy: #0000ff;
+    --power-up-color: #ffffff;
+}
+
+/* Retro Pixel Theme */
+body.retro-theme {
+    --bg-color: #222034;
+    --text-color: #f8f8f8;
+    --primary-color: #ffd800;
+    --secondary-color: #29adff;
+    --accent-color: #ff004d;
+    --wall-color: #5a6988;
+    --dot-color: #ffd800;
+    --player-color: #ffd800;
+    --enemy-red: #ff004d;
+    --enemy-blue: #29adff;
+    --enemy-purple: #83769c;
+    --enemy-green: #00e756;
+    --vulnerable-enemy: #0000ff;
+    --power-up-color: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.game-container {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 0 20px var(--primary-color);
+    overflow: hidden;
+}
+
+.screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+    padding: 20px;
+}
+
+.screen.active {
+    display: flex;
+}
+
+button {
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Animations */
+@keyframes glow {
+    0% { text-shadow: 0 0 5px var(--primary-color); }
+    50% { text-shadow: 0 0 20px var(--primary-color), 0 0 30px var(--primary-color); }
+    100% { text-shadow: 0 0 5px var(--primary-color); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}

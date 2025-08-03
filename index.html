@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pac-Mon Game</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/game.css">
+    <link rel="stylesheet" href="./css/menu.css">
+</head>
+<body>
+    <div class="game-container">
+        <div id="menu-screen" class="screen active">
+            <h1 class="game-title">PAC-MON</h1>
+            <div class="menu-options">
+                <button id="start-game" class="menu-btn">Start Game</button>
+                <div class="option-group">
+                    <label>Sound:</label>
+                    <button id="sound-toggle" class="toggle-btn on">ON</button>
+                </div>
+                <div class="option-group">
+                    <label>Difficulty:</label>
+                    <div class="difficulty-options">
+                        <button id="easy" class="difficulty-btn active">Easy</button>
+                        <button id="medium" class="difficulty-btn">Medium</button>
+                        <button id="hard" class="difficulty-btn">Hard</button>
+                    </div>
+                </div>
+                <div class="option-group">
+                    <label>Controls:</label>
+                    <div class="controls-options">
+                        <button id="arrows" class="controls-btn active">Arrow Keys</button>
+                        <button id="wasd" class="controls-btn">WASD</button>
+                    </div>
+                </div>
+                <div class="option-group">
+                    <label>Theme:</label>
+                    <div class="theme-options">
+                        <button id="classic" class="theme-btn active">Classic</button>
+                        <button id="neon" class="theme-btn">Neon</button>
+                        <button id="retro" class="theme-btn">Retro Pixel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="game-screen" class="screen">
+            <div class="game-header">
+                <div class="score-container">
+                    <span>Score: </span>
+                    <span id="score">0</span>
+                </div>
+                <div class="lives-container">
+                    <span>Lives: </span>
+                    <span id="lives">3</span>
+                </div>
+                <div class="level-container">
+                    <span>Level: </span>
+                    <span id="level">1</span>
+                </div>
+            </div>
+            <canvas id="game-canvas"></canvas>
+            <button id="pause-btn" class="game-btn">Pause</button>
+        </div>
+
+        <div id="pause-screen" class="screen">
+            <h2>Game Paused</h2>
+            <button id="resume-btn" class="menu-btn">Resume</button>
+            <button id="restart-btn" class="menu-btn">Restart</button>
+            <button id="menu-btn" class="menu-btn">Main Menu</button>
+        </div>
+
+        <div id="game-over-screen" class="screen">
+            <h2>Game Over</h2>
+            <div class="final-score">
+                <span>Final Score: </span>
+                <span id="final-score">0</span>
+            </div>
+            <div class="high-score">
+                <span>High Score: </span>
+                <span id="high-score">0</span>
+            </div>
+            <button id="play-again-btn" class="menu-btn">Play Again</button>
+            <button id="menu-btn-end" class="menu-btn">Main Menu</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./js/constants.js"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/audio.js"></script>
+    <script src="./js/player.js"></script>
+    <script src="./js/enemies.js"></script>
+    <script src="./js/maze.js"></script>
+    <script src="./js/powerups.js"></script>
+    <script src="./js/game.js"></script>
+    <script src="./js/ui.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
